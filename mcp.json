@@ -1,0 +1,15 @@
+{
+  "servers": {
+    "shopify-dev-mcp": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@shopify/dev-mcp@latest"
+      ]
+    },
+    "jetbrains": {
+      "url": "http://localhost:64342/sse",
+      "type": "sse"
+    }
+  }
+}
