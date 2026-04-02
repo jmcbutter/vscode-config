@@ -1,10 +1,60 @@
-// Place your key bindings in this file to override the defaults
 [
-  /* HELP MODE MAP */
+  // about-emacs
+  {
+    "key": "ctrl+h ctrl+a",
+    "command": "workbench.action.showAboutDialog"
+  },
+  // view-emacs-debugging
+  {
+    "key": "ctrl+h ctrl+d",
+    "command": "workbench.action.troubleshootIssue.start"
+  },
+  // view-emacs-news
+  {
+    "key": "ctrl+h ctrl+n",
+    "command": "update.showCurrentReleaseNotes"
+  },
+  // help-quick-toggle
+  {
+    "key": "ctrl+h ctrl+q",
+    "command": "workbench.action.keybindingsReference"
+  },
+  // view-emacs-todo
+  {
+    "key": "ctrl+h ctrl+t",
+    "command": "workbench.action.openRequestFeatureUrl"
+  },
+  // display-local-help
   {
     "key": "ctrl+h .",
     "command": "workbench.action.showHover",
   },
+  // describe-package
+  {
+    "key": "ctrl+h shift+p",
+    "command": "workbench.extensions.action.installedExtensions"
+  },
+  // info-display-manual
+  {
+    "key": "ctrl+h shift+r",
+    "command": "workbench.action.openDocumentationUrl"
+  },
+  // describe-bindings
+  {
+    "key": "ctrl+h b",
+    "command": "workbench.action.openGlobalKeybindings"
+  },
+  // view-echo-area-messages
+  {
+    "key": "ctrl+h e",
+    "command": "workbench.action.showLogs"
+  },
+  // help-with-tutorial
+  {
+    "key": "ctrl+h t",
+    "command": "workbench.action.showInteractivePlayground"
+  },
+  // Place your key bindings in this file to override the defaults here
   {
     "key": "ctrl+enter",
     "command": "-github.copilot.generate",
@@ -74,5 +124,31 @@
     "key": "ctrl+delete",
     "command": "-deleteWordRight",
     "when": "textInputFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+shift+/",
+    "command": "redo"
+  },
+  {
+    "key": "ctrl+x ctrl+j",
+    "command": "workbench.files.action.showActiveFileInExplorer"
+  },
+  {
+    "key": "ctrl+x ctrl+l",
+    "command": "editor.action.transformToLowercase"
+  },
+  {
+    "key": "ctrl+x shift+6",
+    "command": "workbench.action.increaseViewWidth",
+    "when": "!isAuxiliaryWindowFocusedContext"
+  },
+  {
+    "key": "ctrl+x d",
+    "command": "workbench.action.files.openFolderViaWorkspace",
+  },
+  {
+    "key": "ctrl+x ctrl+f",
+    "command": "workbench.action.files.openFileFolder",
+    "when": "openFolderWorkspaceSupport"
   }
 ]

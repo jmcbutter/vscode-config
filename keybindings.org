@@ -1,0 +1,222 @@
+#+PROPERTY: header-args:js-json :tangle keybindings.json
+
+* Opening Bracket
+#+begin_src js-json
+    [
+#+end_src
+
+
+* Global Keymap
+#+begin_src js-json
+    // quoted-insert
+    // undo-redo
+    {
+        "key": "ctrl+shift+/",
+        "command": "redo"
+    },
+    // pop-global-mark
+    {
+        "key": "ctrl+x ctrl+space",
+        "command": "workbench.action.navigateBackInEditLocations"
+    },
+    // find-file
+    {
+        "key": "ctrl+x ctrl+f",
+        "command": "workbench.action.files.openFileFolder",
+        "when": "openFolderWorkspaceSupport"
+    },
+    // dired-jump
+    {
+        "key": "ctrl+x ctrl+j",
+        "command": "workbench.files.action.showActiveFileInExplorer"
+    },
+    // downcase-region
+    {
+        "key": "ctrl+x ctrl+l",
+        "command": "editor.action.transformToLowercase"
+    },
+    // read-only-mode
+    {
+        "key": "ctrl+x ctrl+q",
+        "command": "workbench.action.files.toggleActiveEditorReadonlyInSession"
+    },
+    // enlarge-window
+    {
+        "key": "ctrl+x shift+6",
+        "command": "workbench.action.increaseViewHeight",
+        "when": "!isAuxiliaryWindowFocusedContext"
+    },
+    // dired
+    {
+        "key": "ctrl+x d",
+        "command": "workbench.action.files.openFolderViaWorkspace"
+    },
+    // magit-status
+    {
+        "key": "ctrl+x g",
+        "command": "",
+    },
+    // shrink-window-horizontally
+    {
+        "key": "ctrl+x shift+[",
+        "command": "workbench.action.decreaseViewWidth",
+        "when": "!isAuxiliaryWindowFocusedContext"
+    },
+    // enlarge-window-horizontally
+    {
+        "key": "ctrl+x shift+]",
+        "command": "workbench.action.increaseViewWidth",
+        "when": "!isAuxiliaryWindowFocusedContext"
+    },
+    // backward-kill-sentence
+    // text-scale-adjust
+
+    // comment-line
+
+    // previous-buffer
+    // next-buffer
+#+end_src
+
+
+* Help Mode
+#+begin_src js-json
+    // about-emacs
+    {
+        "key": "ctrl+h ctrl+a",
+        "command": "workbench.action.showAboutDialog"
+    },
+    // view-emacs-debugging
+    {
+        "key": "ctrl+h ctrl+d",
+        "command": "workbench.action.troubleshootIssue.start"
+    },
+    // view-emacs-news
+    {
+        "key": "ctrl+h ctrl+n",
+        "command": "update.showCurrentReleaseNotes"
+    },
+    // help-quick-toggle
+    {
+        "key": "ctrl+h ctrl+q",
+        "command": "workbench.action.keybindingsReference"
+    },
+    // view-emacs-todo
+    {
+        "key": "ctrl+h ctrl+t",
+        "command": "workbench.action.openRequestFeatureUrl"
+    },
+    // display-local-help
+    {
+        "key": "ctrl+h .",
+        "command": "workbench.action.showHover",
+    },
+    // describe-package
+    {
+        "key": "ctrl+h shift+p",
+        "command": "workbench.extensions.action.installedExtensions"
+    },
+    // info-display-manual
+    {
+        "key": "ctrl+h shift+r",
+        "command": "workbench.action.openDocumentationUrl"
+    },
+    // describe-bindings
+    {
+        "key": "ctrl+h b",
+        "command": "workbench.action.openGlobalKeybindings"
+    },
+    // view-echo-area-messages
+    {
+        "key": "ctrl+h e",
+        "command": "workbench.action.showLogs"
+    },
+    // help-with-tutorial
+    {
+        "key": "ctrl+h t",
+        "command": "workbench.action.showInteractivePlayground"
+    },
+#+end_src
+
+* Copilot
+#+begin_src js-json
+    // Place your key bindings in this file to override the defaults here
+    {
+        "key": "ctrl+enter",
+        "command": "-github.copilot.generate",
+        "when": "editorTextFocus && github.copilot.activated && !commentEditorFocused"
+    },
+    #+end_src
+
+* Misc
+#+begin_src js-json
+    {
+        "key": "ctrl+shift+i",
+        "command": "-workbench.action.chat.openEditSession",
+        "when": "chatEditingParticipantRegistered && !chatSetupHidden && view != 'workbench.panel.chat.view.edits'"
+    },
+    {
+        "key": "ctrl+left",
+        "command": "cursorWordPartLeft",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "ctrl+shift+left",
+        "command": "cursorWordPartLeftSelect",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "ctrl+left",
+        "command": "-cursorWordLeft",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "ctrl+shift+left",
+        "command": "-cursorWordLeftSelect",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "ctrl+right",
+        "command": "cursorWordPartRight",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "ctrl+shift+right",
+        "command": "cursorWordPartRightSelect",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "ctrl+shift+right",
+        "command": "-cursorWordEndRightSelect",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "ctrl+right",
+        "command": "-cursorWordEndRight",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "ctrl+backspace",
+        "command": "deleteWordPartLeft",
+        "when": "textInputFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+delete",
+        "command": "deleteWordPartRight",
+        "when": "textInputFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+backspace",
+        "command": "-deleteWordLeft",
+        "when": "textInputFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+delete",
+        "command": "-deleteWordRight",
+        "when": "textInputFocus && !editorReadonly"
+    }
+#+end_src
+
+* Closing Bracket
+#+begin_src js-json
+    ]
+#+end_src
