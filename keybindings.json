@@ -27,7 +27,7 @@
   // display-local-help
   {
     "key": "ctrl+h .",
-    "command": "workbench.action.showHover",
+    "command": "editor.action.showHover",
   },
   // describe-package
   {

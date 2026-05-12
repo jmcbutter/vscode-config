@@ -48,7 +48,7 @@
   "files.simpleDialog.enable": true,
   "workbench.layoutControl.enabled": false,
   "workbench.sash.size": 6,
-  "workbench.preferredDarkColorTheme": "Default Dark+",
+  "workbench.preferredDarkColorTheme": "Dark+",
   "workbench.tree.renderIndentGuides": "always",
   "workbench.editor.openPositioning": "last",
   "workbench.editor.pinnedTabsOnSeparateRow": true,
@@ -104,7 +104,7 @@
   "terminal.integrated.hideOnStartup": "whenEmpty",
   "terminal.integrated.shellIntegration.decorationsEnabled": "never",
   "window.confirmSaveUntitledWorkspace": false,
-  "workbench.colorTheme": "Default Light Modern",
+  "workbench.colorTheme": "Light Modern",
   "figma.autocompleteBlocks": true,
   "workbench.editor.tabSizing": "shrink",
   "workbench.editor.autoLockGroups": {
@@ -372,7 +372,6 @@
     "**/.git": false,
     "snippets/reploChunk.*": true
   },
-  "workbench.iconTheme": "file-icons",
   "mdb.mcp.server": "prompt",
   "shopify.themeGraph.dependencies.enabled": true,
   "geminicodeassist.project": "strategic-tractor-x8wgb",
@@ -436,4 +435,5 @@
     "*.copilotmd": "vscode.markdown.preview.editor",
     "*.json": "default"
   },
+  "chat.viewSessions.orientation": "stacked",
 }
